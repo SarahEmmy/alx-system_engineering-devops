@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
-# comments go here!
-# trap: receive signal
-echo $$ >> /var/run/holbertonscript.pid
-trap "echo Y U no love me?!" SIGINT
-trap "echo I hate the kill command && rm -rf /var/run/holbertonscript.pid; exit" SIGTERM SIGQUIT
-while :
+
+# Bash script demonstrating signal handling using 'trap' command.
+# Infinite loop printing a message and handling SIGINT, SIGTERM, and SIGQUIT signals.
+
+echo $$ >> /var/run/holbertonscript.pid  # Store process ID in /var/run/holbertonscript.pid
+
+trap "echo Why don't you love me?!" SIGINT  # Trap SIGINT (Ctrl+C) and display message
+
+# Trap SIGTERM and SIGQUIT, perform cleanup, and exit
+trap "echo I hate the kill command && rm -rf /var/run/holbertonscript.pid; exit" SIGTERM SIGQUIT 
+while :  # Infinite loop
 do
-	echo "To infinity and beyond"
-	sleep 2
+    echo "To infinity and beyond"  # Print message
+    sleep 2
 done
