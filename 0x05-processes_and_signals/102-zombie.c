@@ -4,9 +4,13 @@
 #include <stdio.h>
 
 /**
- * infinite_while - Infinite while for manage zombie process
- * Void: No entry parameters
- * Return: exit 0 success
+ * infinite_while - Infinite loop to manage zombie processes.
+ *
+ * This function helps manage zombie processes in a parent process
+ * after forking child processes. It prevents child processes from
+ * becoming zombies by waiting for their termination.
+ *
+ * Return: This function runs indefinitely until interrupted or an error occurs.
  */
 int infinite_while(void)
 {
@@ -18,9 +22,14 @@ int infinite_while(void)
 }
 
 /**
- * main - Main function zombie process
- * Void: No entry parameters
- * Return: Exit 0 success
+ * main - Main function to demonstrate zombie process handling.
+ *
+ * This program showcases how to handle zombie processes in a parent process
+ * after forking child processes. It utilizes the infinite_while() function
+ * to prevent child processes from becoming zombies by waiting for their
+ * termination.
+ *
+ * Return: 0 on successful execution.
  */
 int main(void)
 {
