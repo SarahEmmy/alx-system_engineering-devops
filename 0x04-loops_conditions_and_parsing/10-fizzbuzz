@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 # Bash script for create a Fizz Buzz
-x=1
-while [ $x -le 100 ]
+i=1
+while [ $i -le 100 ]
 do
-	if [ $((x % 15)) == 0 ];
+	if [ $((i % 15)) == 0 ];
 	then
 		echo "FizzBuzz"
 
-	elif [ $((x % 5)) == 0 ];
+	elif [ $((i % 5)) == 0 ];
 	then
 		echo "Buzz"
 
-	elif [ $((x % 3)) == 0 ];
+	elif [ $((i % 3)) == 0 ];
 	then
 		echo "Fizz"
 	else
-		echo $x
-	fx
-	((x++))
+		echo $i
+	fi
+	((i++))
 done
