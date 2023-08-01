@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-# Bash script demonstrating signal handling using 'trap' command.
+# Bash script demonstrating signal handling using "trap" command.
 # Infinite loop printing a message and handling SIGINT, SIGTERM, and SIGQUIT signals.
 
 echo $$ >> /var/run/holbertonscript.pid  # Store process ID in /var/run/holbertonscript.pid
 
-trap "echo Why don't you love me?!" SIGINT  # Trap SIGINT (Ctrl+C) and display message
+trap "echo Why you love me?!" SIGINT  # Trap SIGINT (Ctrl+C) and display message
 
 # Trap SIGTERM and SIGQUIT, perform cleanup, and exit
 trap "echo I hate the kill command && rm -rf /var/run/holbertonscript.pid; exit" SIGTERM SIGQUIT 
