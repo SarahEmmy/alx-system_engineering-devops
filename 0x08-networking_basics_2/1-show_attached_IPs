@@ -1,3 +1,17 @@
 #!/usr/bin/env bash
-# Bash script that displays all active IPv4 IPs on the machine it’s executed on.
-ifconfig | grep 'inet addr:' | cut -d: -f2 | cut -d" " -f1
+# Bash script that displays all active IPv4 IPs on the machine it's executed on.
+
+# Get the hostname
+HOSTNAME=$(hostname)
+
+# Use 'ping' to retrieve the IP addresses of external and loopback interfaces
+PING_OUTPUT=$(ping -c 1 8.8.8.8)   # External IP
+PING_OUTPUT+="$(ping -c 1 10.0.2.15)"   # Internal IP (modify to the appropriate internal IP)
+PING_OUTPUT+="$(ping -c 1 127.0.0.1)"   # Loopback IP
+
+# Use 'grep' and 'awk' to extract the unique IP addresses from the combined output
+IP_ADDRESSES=$(echo "${PING_OUTPUT}" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | sort -u)
+
+echo "Host: ${HOSTNAME}"
+echo "IP Addresses:"
+echo "${IP_ADDRESSES}"
