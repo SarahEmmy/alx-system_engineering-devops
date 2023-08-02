@@ -1,56 +1,82 @@
-# 0x07 Networking Basics
+# 0x07. Networking Basics
 
-Welcome to the "0x07 Networking Basics" repository! This repository contains information and examples related to networking fundamentals. Whether you are new to networking or looking to brush up on your skills, this repository aims to provide you with a solid foundation in networking concepts.
+## Resources:books:
+Read or watch:
+* [OSI Model](https://en.wikipedia.org/wiki/OSI_model)
+* [Different Types of Network](https://www.lifewire.com/lans-wans-and-other-area-networks-817376)
+* [MAC address](https://whatismyipaddress.com/mac-address)
+* [Private and public address](https://www.iplocation.net/public-vs-private-ip-address)
+* [Localhost](https://whatismyipaddress.com/localhost)
+* [TCP and UDP](https://www.howtogeek.com/190014/htg-explains-what-is-the-difference-between-tcp-and-udp/)
 
-## Table of Contents
+----
+## Learning objectives:bulb:
 
-- [Introduction](#introduction)
-- [Topics Covered](#topics-covered)
-- [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [License](#license)
 
-## Introduction
+## **OSI Model**
 
-Networking is a crucial aspect of modern computing, enabling devices to communicate with each other and access resources over the internet. This repository serves as a resource to understand the basics of networking, including protocols, IP addressing, routing, and more. The content here is designed to be beginner-friendly, but we also include advanced topics to cater to a broader audience.
+-> What it is
 
-## Topics Covered
+-> How many layers it has
 
-Here are some of the key topics covered in this repository:
+-> How it is organized
 
-- Networking fundamentals
-- OSI and TCP/IP models
-- IP addressing and subnetting
-- Network devices (routers, switches, etc.)
-- Network protocols (TCP, UDP, HTTP, etc.)
-- Domain Name System (DNS)
-- Network security and common threats
-- Troubleshooting network issues
+## **What is a LAN**
 
-This list is not exhaustive, and we may add more topics in the future based on community feedback and requests.
+-> Typical usage
 
-## Getting Started
+-> Typical geographical size
 
-To get started with the content in this repository, you can simply browse the folders and files. The repository is organized into different sections, each covering a specific networking topic. Each section contains documentation, examples, and sometimes even interactive exercises to reinforce your understanding.
+## **What is a WAN**
 
-Additionally, you can clone this repository to your local machine using the following command:
+-> Typical usage
 
-```
-git clone https://github.com/SarahEmmy/0x07-networking_basics.git
-```
+-> Typical geographical size
 
-Feel free to explore the material and dive into the topics that interest you the most. We encourage you to read the documentation and run the examples to better grasp the concepts.
+## **What is the Internet**
 
-## Contributing
+-> What is an IP address
 
-We welcome contributions to enhance the content of this repository. If you find any issues, errors, or have suggestions for improvement, please don't hesitate to open an issue or submit a pull request. Your contributions will help make this repository a more valuable resource for everyone in the community.
+-> What are the 2 types of IP address
 
-When contributing, please follow the guidelines outlined in the `CONTRIBUTING.md` file.
+-> What is localhost
 
-## License
+-> What is a subnet
 
-This repository is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute the content within the terms and conditions of the license.
+-> Why IPv6 was created
 
-Happy learning and networking!
+## **TCP/UDP**
 
-The 0x07 Networking Basics Team
+-> What are the 2 mainly used data transfer protocols for IP (transfer level on the OSI schema)
+
+-> What is the main difference between TCP and UDP
+
+-> What is a port
+
+-> Memorize SSH, HTTP and HTTPS port numbers
+
+-> What tool/protocol is often used to check if a device is connected to a network
+
+
+---
+
+### [0. OSI_ Model](./0-OSI_model)
+
+### [1. Types of Network](./1-types_of_network)
+
+### [2. MAC and IP address](./2-MAC_and_IP_address)
+
+### [3. UDP and TCP](./3-UDP_and_TCP)
+
+### [4. TCP and UDP ports](./4-TCP_and_UDP_ports)
+
+### [5. Is the host on the Network](./5-is_the_host_on_the_network)
+
+------
+
+## Author
+* **Joseph Mahiuha** - [Mahiuha](https://github.com/Mahiuha)
+
+-----
+
+
