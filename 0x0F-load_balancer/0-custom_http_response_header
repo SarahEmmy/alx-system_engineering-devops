@@ -1,28 +1,26 @@
 #!/usr/bin/env bash
 
-# Get the hostname
-var=$(hostname)
-
-# Define new strings for Nginx configuration
-new_string="error_page 404 /custom_404.html;\n location /redirect_me {\n return 301 \$scheme://www.google.com;"
-new_string2="server {\n\tadd_header X-Served-By $var;"
+# configuring web-01 to have an HTTP response header
 
 # Update and install Nginx
-apt-get update -y
-apt-get install nginx -y
+sudo apt-get update
+sudo apt-get install -y nginx
 
 # Create a simple index.html file
-echo "Hello, World!" > /usr/share/nginx/html/index.html
+echo "Hello, World!" | sudo tee /var/www/html/index.html
 
-# Create a directory for custom content
-mkdir -p /var/www/html
+# Performing a redirection 
+new_string="server_name -;\n\trewrite ^\/redirect_me https:\/\/github.com\/SarahEmmy permanent;"
+sudo sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-enabled/default
 
-# Create a custom 404 page
-echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
+# Create a custom error 404 page
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
 
-# Update the Nginx configuration with the custom strings
-sudo sed -i -E "s/^[^#]+location \/ {/$new_string/" /etc/nginx/sites-available/default
-sudo sed -i -E "s/^server {/$new_string2/" /etc/nginx/sites-available/default
+# customHTTP response header
+sudo sed -i "server_name _;/a add_header X-served-By $HOSTNAME;" /etc/nginx/sites-enabled/default
+
+#Testing for syntax errors
+sudo nginx -t 
 
 # Start the Nginx service
 sudo service nginx start
