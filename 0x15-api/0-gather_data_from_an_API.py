@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-This script will fetch the TODO list for the employee with 
+This script will fetch the TODO list for the employee with
 the provided ID and display the progress of each task.
-Make sure to have the requests module installed 
+Make sure to have the requests module installed
 before running the script.
 """
 
