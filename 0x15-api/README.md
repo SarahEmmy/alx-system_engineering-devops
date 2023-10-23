@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 A README file is a crucial component of any software project, serving as a guide for users and developers to understand the purpose and usage of the codebase. Below is an example of a README file for the 0x15-api project:
 
 # 0x15-api
