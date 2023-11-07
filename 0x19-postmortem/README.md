@@ -1,7 +1,7 @@
 # 0x19. Postmortem
 # Incident Report - Website Downtime
 
-On November 2, 2023, our website experienced an unexpected outage, rendering it inaccessible to users for approximately one hour. The downtime was due to an error in the load balancer configuration, causing it to become unresponsive and unable to direct traffic to the appropriate servers.
+On November 5, 2023, our website experienced an unexpected outage, rendering it inaccessible to users for approximately one hour. The downtime was due to an error in the load balancer configuration, causing it to become unresponsive and unable to direct traffic to the appropriate servers.
 
 ## Timeline:
 - 9:30 AM: An unusual surge in user traffic was detected on the website.
