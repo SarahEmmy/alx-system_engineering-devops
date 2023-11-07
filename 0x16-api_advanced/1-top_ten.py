@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Function that queries the Reddit API and prints the titles
-of the first 10 hot posts listed for a given subreddit.
+Function that retrieves the titles of the first 10 hot posts
+for a specific subreddit by querying the Reddit API.
 """
 
 import requests
@@ -9,8 +9,9 @@ import requests
 
 def top_ten(subreddit):
     """
-    Function that queries the Reddit API
-    - If not a valid subreddit, print None.
+    Function that queries the Reddit API for a given
+    subreddit. If the subreddit is not valid
+    it prints None.
     """
     req = requests.get(
         "https://www.reddit.com/r/{}/hot.json".format(subreddit),
