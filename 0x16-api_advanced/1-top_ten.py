@@ -9,9 +9,8 @@ import requests
 
 def top_ten(subreddit):
     """
-    Function that queries the Reddit API for a given
-    subreddit. If the subreddit is not valid
-    it prints None.
+    Function that queries the Reddit API for a given subreddit.
+    If the subreddit is not valid, it prints None.
     """
     req = requests.get(
         "https://www.reddit.com/r/{}/hot.json".format(subreddit),
