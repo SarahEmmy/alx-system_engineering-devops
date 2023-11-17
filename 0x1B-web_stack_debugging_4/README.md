@@ -20,4 +20,4 @@
 
 ### Author
 
-**Joseph Mahiuha** - [Mahiuha](https:///github.com/Mahiuha)
+**Bawa Sarah S.** - [SarahEmmy](https:///github.com/SarahEmmy)
