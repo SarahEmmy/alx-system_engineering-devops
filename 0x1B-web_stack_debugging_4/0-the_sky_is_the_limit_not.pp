@@ -1,5 +1,6 @@
-# Fix Nginx limits
-exec { 'Limit':
-  command => '/usr/bin/env sed -i s/15/2000/ /etc/default/nginx',
+# Fixes an nginx site that can't handle multiple concurrent requests
+exec { 'fix--for-nginx':
+  command => "bash -c \"sed -iE 's/^ULIMIT=.*/ULIMIT=\\\"-n 8192\\\"/' \
+/etc/default/nginx; service nginx restart\"",
+  path    => '/usr/bin:/usr/sbin:/bin'
 }
-exec { '/usr/bin/env service nginx restart': }
